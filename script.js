@@ -1,4 +1,3 @@
-// DOM Elements
 import {moviesData} from "./data.js";
 const moodRadios = document.getElementById("mood-radios");
 const getMovieBtn = document.getElementById("get-movie-btn");
@@ -7,21 +6,21 @@ const movieModalInner = document.getElementById("movie-modal-inner");
 const movieModal = document.getElementById("movie-modal");
 const movieModalCloseBtn = document.getElementById("movie-modal-close-btn");
 
-// Event Listeners
+
 moodRadios.addEventListener("change", highlightCheckedOption);
 getMovieBtn.addEventListener("click", renderMovie);
 movieModalCloseBtn.addEventListener("click", function () {
   movieModal.style.display = "none";
 });
 
-// Close modal when clicking outside
+
 movieModal.addEventListener("click", function (e) {
   if (e.target === movieModal) {
     movieModal.style.display = "none";
   }
 });
 
-// Main Functions
+
 function renderMovie() {
   const movieObject = getSingleMovieObject();
 
@@ -117,7 +116,7 @@ function renderMoodRadios(movies) {
   moodRadios.innerHTML = radioItems;
 }
 
-// Initialize the app
+
 renderMoodRadios(moviesData);
 
 
