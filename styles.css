@@ -1,0 +1,285 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: #ffffff;
+  margin: 0;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+h3 {
+  margin: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Header */
+header {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 400px;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.movie-icon {
+  font-size: 80px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Main Content */
+main {
+  background: rgba(255, 255, 255, 0.95);
+  margin: 40px auto;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Controls */
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mood-radios {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.radio:last-child {
+  border-bottom: none;
+}
+
+.radio:hover {
+  background-color: #f8f9ff;
+}
+
+.radio label {
+  font-size: 16px;
+  padding: 8px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.highlight label {
+  color: white;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+  margin-right: 10px;
+  accent-color: #667eea;
+}
+
+/* Checkbox */
+.classics-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 10px;
+}
+
+.classics-check-label {
+  margin-right: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: #667eea;
+  transform: scale(1.2);
+}
+
+/* Button */
+.get-movie-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 18px 24px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.get-movie-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+.get-movie-btn:active {
+  transform: translateY(0);
+}
+
+/* Modal */
+.movie-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.movie-modal-content {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.movie-modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  color: #666;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.movie-modal-close-btn:hover {
+  background: #ff4757;
+  color: white;
+}
+
+.movie-poster {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  margin: 0 auto 20px;
+  display: block;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.movie-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.movie-details {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.movie-genre {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 10px auto;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .header-inner {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .movie-icon {
+    font-size: 60px;
+  }
+
+  main {
+    margin: 20px auto;
+    padding: 20px;
+  }
+}

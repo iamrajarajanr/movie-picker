@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Night Picker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="movie-icon">🎬</div>
+        <div>
+          <h2>What's Your Mood?</h2>
+          <h1>Movie Night Picker</h1>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h3>Select Your Current Mood</h3>
+      <div class="controls-container">
+        <div class="mood-radios" id="mood-radios">
+          <!-- Mood radio buttons will be generated here -->
+        </div>
+
+        <div class="classics-check">
+          <label for="classics-only-option" class="classics-check-label"
+            >Classic Movies Only (Before 2000)</label
+          >
+          <input type="checkbox" id="classics-only-option" />
+        </div>
+
+        <button class="get-movie-btn" id="get-movie-btn">
+          🎭 Get Movie Suggestion
+        </button>
+      </div>
+    </main>
+
+    <div class="movie-modal" id="movie-modal">
+      <div class="movie-modal-content">
+        <button class="movie-modal-close-btn" id="movie-modal-close-btn">
+          ×
+        </button>
+        <div id="movie-modal-inner">
+          <!-- Movie details will be inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
